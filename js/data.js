@@ -5,7 +5,7 @@ var settings = {
 };
 
 $.ajax(settings).done(function (response) {
- // console.log(response);
+ console.log(response);
   var x = response.statewise;
   console.log(x.length);
   var text = "";

@@ -16,7 +16,7 @@ body {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   background-color: inherit;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0px 4px 5px rgba(255, 255, 255, 0.295) !important;
 }
 
 td:nth-child(1) {
@@ -61,11 +61,32 @@ table.table-hover tbody tr:hover {
 }
 
 .sideNav {
-  width: 50px;
+  width: 75px;
   height: 100%;
-  position: absolute;
+  position: fixed;
+  left: 0px;
 }
 
 .mainContent {
-  padding-left: 50px;
+  padding-left: 75px;
 }
+
+@media only screen and (max-width: 600px) {
+  .sideNav {
+    display: none;
+    width: 0px;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+  }
+  .mainContent {
+    padding-left: 0px;
+  }
+}
+
+.nav-item {
+  border: 4px solid #161625;
+  border-radius: 10px !important;
+}
+
+

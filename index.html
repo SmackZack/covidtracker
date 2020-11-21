@@ -24,155 +24,183 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-dark unique-color white-text">
-      <span class="navbar-brand ">Covid19<small class="blue-text">India</small> Tracker</span>
+    <nav class="navbar navbar-dark unique-color white-text sticky-top">
+      <span class="navbar-brand"
+        ><i class="fas fa-angle-down"></i> Covid19<small class="blue-text"
+          >India</small
+        >
+        Tracker</span
+      >
     </nav>
-    <div class="sideNav unique-color shadow-lg">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ratione, reprehenderit eos doloremque praesentium facilis totam necessitatibus, nihil id ipsa quo vitae sint itaque omnis enim, debitis veniam quam? Perferendis?
+    <div
+      class="sideNav unique-color shadow-lg text-center d-flex flex-column px-2"
+    >
+      <a href="#" class="my-2 py-2"><i class="fas fa-2x fa-home"></i></a>
+      <a href="#" class="my-2 py-2"
+        ><i class="fas fa-2x fa-address-card"></i
+      ></a>
     </div>
-   <div class="mainContent">
+    <div class="mainContent">
       <div class="container-fluid unique-color-dark text-white-50">
-      <div class="row">
-        <div class="col-lg-6 col-sm-12 pt-5">
-          <div class="text-center">
-            <small>Search your State/Union Teritary Here</small>
-          </div>
-          <!-- Search form -->
-          <div class="mt-0 px-4 position-relative">
-            <i class="fas fa-2x fa-search" aria-hidden="true"></i>
-            <input
-              class="form-control unique-color my-3 p-4 border border-dark"
-              type="text"
-              placeholder="Search"
-              id="tableSearch"
-              aria-label="Search"
-            />
-          </div>
-          <div class="table-responsive text-wrap table-responsive-sm">
-            <div class="h1"></div>
-            <table
-              id="dtMaterialDesignExample"
-              class="table text-white-50 font-weight-bolder table-borderless table-hover table-striped"
-              cellspacing="0"
-              width="100%"
-            >
-              <thead class="">
-                <tr>
-                  <th class="th-sm">State/UT</th>
-                  <th class="th-sm">Confirmed</th>
-                  <th class="th-sm">Active</th>
-                  <th class="th-sm">Recovered</th>
-                  <th class="th-sm">Deceased</th>
-                </tr>
-              </thead>
-              <tbody id="covidData"></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-12 pt-5">
-          <ul
-            class="nav nav-pills flex-column flex-sm-row"
-            id="pills-tab"
-            role="tablist"
-          >
-            <li
-              class="nav-item flex-sm-fill rounded alert-danger text-sm-center red-text"
-            >
-              <a
-                class="nav-link red-text active"
-                id="pills-home-tab"
-                data-toggle="pill"
-                href="#pills-home"
-                role="tab"
-                aria-controls="pills-home"
-                aria-selected="true"
-              >
-                <div class="h5 pt-2"><strong>Confirmed</strong></div>
-                <div class="font-weight-normal h6">+4600</div>
-                <div class="h4">400033</div>
-              </a>
-            </li>
-            <li
-              class="nav-item flex-sm-fill rounded alert-primary text-sm-center"
-            >
-              <a
-                class="nav-link blue-text"
-                id="pills-profile-tab"
-                data-toggle="pill"
-                href="#pills-profile"
-                role="tab"
-                aria-controls="pills-profile"
-                aria-selected="false"
-              >
-                <div class="h5 pt-2"><strong>Active</strong></div>
-                <div class="font-weight-normal h6">+4600</div>
-                <div class="h4">400033</div></a
-              >
-            </li>
-            <li
-              class="nav-item flex-sm-fill rounded alert-success text-sm-center"
-            >
-              <a
-                class="nav-link green-text"
-                id="pills-contact-tab"
-                data-toggle="pill"
-                href="#pills-contact"
-                role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
-              >
-                <div class="h5 pt-2"><strong>Recovered</strong></div>
-                <div class="font-weight-normal h6">+4600</div>
-                <div class="h4">400033</div></a
-              >
-            </li>
-            <li
-              class="nav-item flex-sm-fill rounded alert-secondary text-sm-center"
-            >
-              <a
-                class="nav-link text-black-50"
-                id="pills-contact-tab"
-                data-toggle="pill"
-                href="#pills-contact"
-                role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
-                ><div class="h5 pt-2"><strong>Deceased</strong></div>
-                <div class="font-weight-normal h6">+4600</div>
-                <div class="h4">400033</div></a
-              >
-            </li>
-          </ul>
-          <div class="tab-content" id="pills-tabContent">
-            <div
-              class="tab-pane fade show active"
-              id="pills-home"
-              role="tabpanel"
-              aria-labelledby="pills-home-tab"
-            >
-              <div id="geochart-colors" style="width: 100%"></div>
+        <div class="row px-3">
+          <div class="col-lg-6 col-sm-12 pt-5">
+            <div class="text-center">
+              <small>Search your State/Union Teritary Here</small>
             </div>
-            <div
-              class="tab-pane fade"
-              id="pills-profile"
-              role="tabpanel"
-              aria-labelledby="pills-profile-tab"
-            >
-              ...
+            <!-- Search form -->
+            <div class="mt-0 px-4 position-relative">
+              <i class="fas fa-2x fa-search" aria-hidden="true"></i>
+              <input
+                class="form-control unique-color my-3 p-4 border border-dark shadow-lg"
+                type="text"
+                placeholder="Search"
+                id="tableSearch"
+                aria-label="Search"
+              />
             </div>
-            <div
-              class="tab-pane fade"
-              id="pills-contact"
-              role="tabpanel"
-              aria-labelledby="pills-contact-tab"
-            >
-              ...
+            <div class="table-responsive text-wrap table-responsive-sm">
+              <ul class="nav nav-pills flex-row" id="pills-tab" role="tablist">
+                <li
+                  class="nav-item flex-fill rounded alert-danger text-sm-center red-text"
+                >
+                  <a
+                    class="nav-link red-text active"
+                    id="pills-home-tab"
+                    data-toggle="pill"
+                    href="#pills-home"
+                    role="tab"
+                    aria-controls="pills-home"
+                    aria-selected="true"
+                  >
+                    <div class="h5 pt-2"><strong>Confirmed</strong></div>
+                    <div class="font-weight-normal h6">+4600</div>
+                    <div class="h4">400033</div>
+                  </a>
+                </li>
+                <li
+                  class="nav-item flex-fill rounded alert-primary text-sm-center"
+                >
+                  <a
+                    class="nav-link blue-text"
+                    id="pills-profile-tab"
+                    data-toggle="pill"
+                    href="#pills-profile"
+                    role="tab"
+                    aria-controls="pills-profile"
+                    aria-selected="false"
+                  >
+                    <div class="h5 pt-2"><strong>Active</strong></div>
+                    <div class="font-weight-normal h6">+4600</div>
+                    <div class="h4">400033</div></a
+                  >
+                </li>
+                <li
+                  class="nav-item flex-fill rounded alert-success text-sm-center"
+                >
+                  <a
+                    class="nav-link green-text"
+                    id="pills-contact-tab"
+                    data-toggle="pill"
+                    href="#pills-contact"
+                    role="tab"
+                    aria-controls="pills-contact"
+                    aria-selected="false"
+                  >
+                    <div class="h5 pt-2"><strong>Recovered</strong></div>
+                    <div class="font-weight-normal h6">+4600</div>
+                    <div class="h4">400033</div></a
+                  >
+                </li>
+                <li
+                  class="nav-item flex-fill rounded alert-secondary text-sm-center"
+                >
+                  <a
+                    class="nav-link text-black-50"
+                    id="pills-about-tab"
+                    data-toggle="pill"
+                    href="#pills-about"
+                    role="tab"
+                    aria-controls="pills-about"
+                    aria-selected="false"
+                    ><div class="h5 pt-2"><strong>Deceased</strong></div>
+                    <div class="font-weight-normal h6">+4600</div>
+                    <div class="h4">400033</div></a
+                  >
+                </li>
+              </ul>
+              <div class="h1"></div>
+              <table
+                id="dtMaterialDesignExample"
+                class="table text-white-50 font-weight-bolder table-borderless table-hover table-striped"
+                cellspacing="0"
+                width="100%"
+              >
+                <thead class="">
+                  <tr>
+                    <th class="th-sm">State/UT</th>
+                    <th class="th-sm">Confirmed</th>
+                    <th class="th-sm">Active</th>
+                    <th class="th-sm">Recovered</th>
+                    <th class="th-sm">Deceased</th>
+                  </tr>
+                </thead>
+                <tbody id="covidData"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 pt-5">
+            <div class="row">
+              <div class="col">
+                <div class="h2 mb-0 red-text">India</div>
+                <small class="grey-text">Last Updated on ..........</small>
+              </div>
+              <div
+                class="col d-flex text-right justify-content-end text-secondary"
+              >
+                <small>
+                  <div class="">Tested</div>
+                  <div>473824738749</div>
+                </small>
+              </div>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-home"
+                role="tabpanel"
+                aria-labelledby="pills-home-tab"
+              >
+                <div id="geochart-colors" style="width: 100%"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                <div id="geochart-colors2" style="width: 100%"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+              >
+                <div id="geochart-colors3" style="width: 100%"></div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-about"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+              >
+                <div id="geochart-colors4" style="width: 100%"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-   </div>
 
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -221,7 +249,7 @@
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
           ["State", "Popularity"],
-          ["Total", 443642],
+
           ["Maharashtra", 79738],
           ["Karnataka", 25169],
           ["Andhra Pradesh", 16000],
@@ -270,7 +298,9 @@
           resolution: "provinces",
           domain: "IN",
           enableRegionInteractivity: true,
-          colorAxis: { colors: ["#7ED06B", "#27511D"] },
+          colorAxis: {
+            colors: ["#ff0000", "#c80000", "#b10000", "#7B0000", "#300000"],
+          },
           datalessRegionColor: "red",
           displayMode: "regions",
           backgroundColor: { fill: "#161625" },
@@ -283,6 +313,308 @@
 
         var chart = new google.visualization.GeoChart(
           document.getElementById("geochart-colors")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        packages: ["geochart"],
+        mapsApiKey: "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY",
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      var data1 = [];
+      data1[0] = `["State", "Popularity"],`;
+      var settings = {
+        url: "https://api.covid19india.org/data.json",
+        method: "GET",
+        timeout: 0,
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response.statewise[0]);
+        var text = "";
+        for (var i = 0; i < response.statewise.length; i++) {
+          data1[i + 1] =
+            `["` +
+            response.statewise[i].state +
+            '",' +
+            response.statewise[i].active +
+            `],`;
+        }
+      });
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["State", "Popularity"],
+
+          ["Maharashtra", 79738],
+          ["Karnataka", 25169],
+          ["Andhra Pradesh", 16000],
+          ["Tamil Nadu", 13907],
+          ["Uttar Pradesh", 22757],
+          ["Kerala", 68234],
+          ["Delhi", 43221],
+          ["West Bengal", 25873],
+          ["Orissa", 8088],
+          ["Telangana", 12515],
+          ["Bihar", 5772],
+          ["Rajasthan", 20168],
+          ["Assam", 3192],
+          ["Chhattisgarh", 19421],
+          ["Haryana", 19579],
+          ["Gujarat", 12577],
+          ["Madhya Pradesh", 9800],
+          ["Punjab", 6194],
+          ["Jharkhand", 2600],
+          ["Jammu and Kashmir", 5560],
+          ["Uttarakhand", 4132],
+          ["Goa", 1343],
+          ["Puducherry", 670],
+          ["Tripura", 959],
+          ["Himachal Pradesh", 6978],
+          ["Manipur", 2886],
+          ["Arunachal Pradesh", 1127],
+          ["Chandigarh", 1105],
+          ["Meghalaya", 798],
+          ["Nagaland", 1292],
+          ["Ladakh", 1000],
+          ["Andaman and Nicobar Islands", 145],
+          ["Sikkim", 297],
+          ["Dadra and Nagar Haveli and Daman and Diu", 34],
+          ["Mizoram", 511],
+          ["State Unassigned", 0],
+          ["Lakshadweep", 0],
+        ]);
+        var text = "";
+        for (var i = 0; i < data1.length; i++) {
+          text += data1[i];
+        }
+        console.log(text);
+        var options = {
+          region: "IN",
+          resolution: "provinces",
+          domain: "IN",
+          enableRegionInteractivity: true,
+          colorAxis: {
+            colors: [
+              "#87CEEB",
+              "#00BFFF",
+              "#1E90FF",
+              "#4682B4",
+              "#0000FF",
+              "#00008B",
+              "#00008B",
+            ],
+          },
+          datalessRegionColor: "red",
+          displayMode: "regions",
+          backgroundColor: { fill: "#161625" },
+          datalessRegionColor: "#161625",
+          defaultColor: "#161625",
+          textStyle: { color: "#FF0000" },
+          showColorCode: true,
+          legend: "none",
+        };
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("geochart-colors2")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        packages: ["geochart"],
+        mapsApiKey: "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY",
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      var data1 = [];
+      data1[0] = `["State", "Popularity"],`;
+      var settings = {
+        url: "https://api.covid19india.org/data.json",
+        method: "GET",
+        timeout: 0,
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response.statewise[0]);
+        var text = "";
+        for (var i = 0; i < response.statewise.length; i++) {
+          data1[i + 1] =
+            `["` +
+            response.statewise[i].state +
+            '",' +
+            response.statewise[i].active +
+            `],`;
+        }
+      });
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["State", "Popularity"],
+
+          ["Maharashtra", 79738],
+          ["Karnataka", 25169],
+          ["Andhra Pradesh", 16000],
+          ["Tamil Nadu", 13907],
+          ["Uttar Pradesh", 22757],
+          ["Kerala", 68234],
+          ["Delhi", 43221],
+          ["West Bengal", 25873],
+          ["Orissa", 8088],
+          ["Telangana", 12515],
+          ["Bihar", 5772],
+          ["Rajasthan", 20168],
+          ["Assam", 3192],
+          ["Chhattisgarh", 19421],
+          ["Haryana", 19579],
+          ["Gujarat", 12577],
+          ["Madhya Pradesh", 9800],
+          ["Punjab", 6194],
+          ["Jharkhand", 2600],
+          ["Jammu and Kashmir", 5560],
+          ["Uttarakhand", 4132],
+          ["Goa", 1343],
+          ["Puducherry", 670],
+          ["Tripura", 959],
+          ["Himachal Pradesh", 6978],
+          ["Manipur", 2886],
+          ["Arunachal Pradesh", 1127],
+          ["Chandigarh", 1105],
+          ["Meghalaya", 798],
+          ["Nagaland", 1292],
+          ["Ladakh", 1000],
+          ["Andaman and Nicobar Islands", 145],
+          ["Sikkim", 297],
+          ["Dadra and Nagar Haveli and Daman and Diu", 34],
+          ["Mizoram", 511],
+          ["State Unassigned", 0],
+          ["Lakshadweep", 0],
+        ]);
+        var text = "";
+        for (var i = 0; i < data1.length; i++) {
+          text += data1[i];
+        }
+        console.log(text);
+        var options = {
+          region: "IN",
+          resolution: "provinces",
+          domain: "IN",
+          enableRegionInteractivity: true,
+          colorAxis: {
+            colors: ["#0eff00", "#1fc600", "#089000", "#0a5d00", "#063b00"],
+          },
+          datalessRegionColor: "red",
+          displayMode: "regions",
+          backgroundColor: { fill: "#161625" },
+          datalessRegionColor: "#161625",
+          defaultColor: "#161625",
+          textStyle: { color: "#FF0000" },
+          showColorCode: true,
+          legend: "none",
+        };
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("geochart-colors3")
+        );
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        packages: ["geochart"],
+        mapsApiKey: "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY",
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      var data1 = [];
+      data1[0] = `["State", "Popularity"],`;
+      var settings = {
+        url: "https://api.covid19india.org/data.json",
+        method: "GET",
+        timeout: 0,
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response.statewise[0]);
+        var text = "";
+        for (var i = 0; i < response.statewise.length; i++) {
+          data1[i + 1] =
+            `["` +
+            response.statewise[i].state +
+            '",' +
+            response.statewise[i].active +
+            `],`;
+        }
+      });
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ["State", "Popularity"],
+
+          ["Maharashtra", 79738],
+          ["Karnataka", 25169],
+          ["Andhra Pradesh", 16000],
+          ["Tamil Nadu", 13907],
+          ["Uttar Pradesh", 22757],
+          ["Kerala", 68234],
+          ["Delhi", 43221],
+          ["West Bengal", 25873],
+          ["Orissa", 8088],
+          ["Telangana", 12515],
+          ["Bihar", 5772],
+          ["Rajasthan", 20168],
+          ["Assam", 3192],
+          ["Chhattisgarh", 19421],
+          ["Haryana", 19579],
+          ["Gujarat", 12577],
+          ["Madhya Pradesh", 9800],
+          ["Punjab", 6194],
+          ["Jharkhand", 2600],
+          ["Jammu and Kashmir", 5560],
+          ["Uttarakhand", 4132],
+          ["Goa", 1343],
+          ["Puducherry", 670],
+          ["Tripura", 959],
+          ["Himachal Pradesh", 6978],
+          ["Manipur", 2886],
+          ["Arunachal Pradesh", 1127],
+          ["Chandigarh", 1105],
+          ["Meghalaya", 798],
+          ["Nagaland", 1292],
+          ["Ladakh", 1000],
+          ["Andaman and Nicobar Islands", 145],
+          ["Sikkim", 297],
+          ["Dadra and Nagar Haveli and Daman and Diu", 34],
+          ["Mizoram", 511],
+          ["State Unassigned", 0],
+          ["Lakshadweep", 0],
+        ]);
+        var text = "";
+        for (var i = 0; i < data1.length; i++) {
+          text += data1[i];
+        }
+        console.log(text);
+        var options = {
+          region: "IN",
+          resolution: "provinces",
+          domain: "IN",
+          enableRegionInteractivity: true,
+          colorAxis: {
+            colors: ["#DCDCDC", "#D3D3D3", "#C0C0C0", "#A9A9A9", "#2F4F4F"],
+          },
+          datalessRegionColor: "red",
+          displayMode: "regions",
+          backgroundColor: { fill: "#161625" },
+          datalessRegionColor: "#161625",
+          defaultColor: "#161625",
+          textStyle: { color: "#FF0000" },
+          showColorCode: true,
+          legend: "none",
+        };
+
+        var chart = new google.visualization.GeoChart(
+          document.getElementById("geochart-colors4")
         );
         chart.draw(data, options);
       }
