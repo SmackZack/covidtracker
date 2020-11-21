@@ -24,20 +24,38 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container-fluid unique-color-dark text-white-50">
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-      </div>
+    <nav class="navbar navbar-dark unique-color white-text">
+      <span class="navbar-brand ">Covid19<small class="blue-text">India</small> Tracker</span>
+    </nav>
+    <div class="sideNav unique-color shadow-lg">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ratione, reprehenderit eos doloremque praesentium facilis totam necessitatibus, nihil id ipsa quo vitae sint itaque omnis enim, debitis veniam quam? Perferendis?
+    </div>
+   <div class="mainContent">
+      <div class="container-fluid unique-color-dark text-white-50">
       <div class="row">
         <div class="col-lg-6 col-sm-12 pt-5">
-          
+          <div class="text-center">
+            <small>Search your State/Union Teritary Here</small>
+          </div>
+          <!-- Search form -->
+          <div class="mt-0 px-4 position-relative">
+            <i class="fas fa-2x fa-search" aria-hidden="true"></i>
+            <input
+              class="form-control unique-color my-3 p-4 border border-dark"
+              type="text"
+              placeholder="Search"
+              id="tableSearch"
+              aria-label="Search"
+            />
+          </div>
           <div class="table-responsive text-wrap table-responsive-sm">
             <div class="h1"></div>
-            <table id="dtMaterialDesignExample"  class="table text-white-50 font-weight-bolder table-borderless table-hover table-striped" cellspacing="0" width="100%">
-              
+            <table
+              id="dtMaterialDesignExample"
+              class="table text-white-50 font-weight-bolder table-borderless table-hover table-striped"
+              cellspacing="0"
+              width="100%"
+            >
               <thead class="">
                 <tr>
                   <th class="th-sm">State/UT</th>
@@ -154,6 +172,7 @@
         </div>
       </div>
     </div>
+   </div>
 
     <!-- jQuery -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -173,9 +192,6 @@
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
     <script type="text/javascript">
-      
-      
-
       google.charts.load("current", {
         packages: ["geochart"],
         mapsApiKey: "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY",
@@ -254,15 +270,15 @@
           resolution: "provinces",
           domain: "IN",
           enableRegionInteractivity: true,
-          colorAxis: { colors: ["#7ED06B","#27511D"] },
+          colorAxis: { colors: ["#7ED06B", "#27511D"] },
           datalessRegionColor: "red",
           displayMode: "regions",
-          backgroundColor: { fill : "#161625"},
+          backgroundColor: { fill: "#161625" },
           datalessRegionColor: "#161625",
           defaultColor: "#161625",
           textStyle: { color: "#FF0000" },
           showColorCode: true,
-          legend: 'none',
+          legend: "none",
         };
 
         var chart = new google.visualization.GeoChart(

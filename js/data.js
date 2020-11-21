@@ -36,10 +36,20 @@ $.ajax(settings).done(function (response) {
 });
 
 $(document).ready(function () {
+  $("#tableSearch").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#covidData tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+});
+
+$(document).ready(function () {
   $("#dtMaterialDesignExample").DataTable({
     paging: false,
+    order: [[1, "desc"]],
     info: false,
-    order: [[1, "asc"]],
+    searching: false,
   });
   $("#dtMaterialDesignExample_wrapper")
     .find("label")
