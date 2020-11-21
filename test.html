@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello world</h1>
+    <script>
+        var myHeaders = new Headers();
+myHeaders.append("Cookie", "__cfduid=d7c6e984c64e1c366def43145d11765be1605865852");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+var x
+fetch("https://restcountries.eu/rest/v2/all", requestOptions)
+  .then(response => response.text())
+  .then(result => re)
+  .catch(error => console.log('error', error));
+  console.log(x)
+    </script>
+</body>
+</html>
