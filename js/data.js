@@ -37,16 +37,9 @@ $.ajax(settings).done(function (response) {
 
 $(document).ready(function () {
   $("#dtMaterialDesignExample").DataTable({
-    
-    info: false,
     paging: false,
-    fnInitComplete: function () {
-      var myCustomScrollbar = document.querySelector(
-        "#dt-fixed-footer_wrapper .dataTables_scrollBody"
-      );
-      var ps = new PerfectScrollbar(myCustomScrollbar);
-    },
-    scrollY: 450,
+    info: false,
+    order: [[1, "asc"]],
   });
   $("#dtMaterialDesignExample_wrapper")
     .find("label")

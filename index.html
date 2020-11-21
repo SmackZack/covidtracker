@@ -24,12 +24,21 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid unique-color-dark text-white-50">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+      </div>
       <div class="row">
         <div class="col-lg-6 col-sm-12 pt-5">
+          
           <div class="table-responsive text-wrap table-responsive-sm">
-            <table id="dtMaterialDesignExample"  class="table" cellspacing="0" width="100%">
-              <thead>
+            <div class="h1"></div>
+            <table id="dtMaterialDesignExample"  class="table text-white-50 font-weight-bolder table-borderless table-hover table-striped" cellspacing="0" width="100%">
+              
+              <thead class="">
                 <tr>
                   <th class="th-sm">State/UT</th>
                   <th class="th-sm">Confirmed</th>
@@ -205,7 +214,7 @@
           ["Kerala", 68234],
           ["Delhi", 43221],
           ["West Bengal", 25873],
-          ["Odisha", 8088],
+          ["Orissa", 8088],
           ["Telangana", 12515],
           ["Bihar", 5772],
           ["Rajasthan", 20168],
@@ -245,14 +254,15 @@
           resolution: "provinces",
           domain: "IN",
           enableRegionInteractivity: true,
-          colorAxis: { colors: ["Blue"] },
+          colorAxis: { colors: ["#7ED06B","#27511D"] },
           datalessRegionColor: "red",
           displayMode: "regions",
-          backgroundColor: { color: "red", stroke: "white" },
-          datalessRegionColor: "transparent",
-          defaultColor: "transparent",
+          backgroundColor: { fill : "#161625"},
+          datalessRegionColor: "#161625",
+          defaultColor: "#161625",
           textStyle: { color: "#FF0000" },
           showColorCode: true,
+          legend: 'none',
         };
 
         var chart = new google.visualization.GeoChart(
